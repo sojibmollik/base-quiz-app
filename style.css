@@ -68,4 +68,18 @@ button {
 hr {
   border: 1px solid #24307a;
   margin: 12px 0;
+}.option {
+  background: #1c3cff;
+}
+
+.option.selected {
+  background: #5ea7ff;
+}
+
+.option.correct {
+  background: #00c896;
+}
+
+.option.wrong {
+  background: #ff4d4d;
 }

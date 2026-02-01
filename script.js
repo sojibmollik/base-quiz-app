@@ -24,8 +24,10 @@ const quiz = [
 let index = 0;
 let score = 0;
 let userAnswers = [];
+let locked = false;
 
 function loadQuestion() {
+  locked = false;
   document.getElementById("question").innerText = quiz[index].q;
   document.getElementById("counter").innerText = `Question ${index + 1}/20`;
 
@@ -34,24 +36,34 @@ function loadQuestion() {
 
   quiz[index].o.forEach((option, i) => {
     const btn = document.createElement("button");
+    btn.className = "option";
     btn.innerText = option;
-    btn.onclick = () => userAnswers[index] = i;
+
+    btn.onclick = () => selectAnswer(btn, i);
     optionsDiv.appendChild(btn);
   });
 }
 
-function nextQuestion() {
-  if (userAnswers[index] === quiz[index].a) {
-    score += 10;
-  }
+function selectAnswer(button, selectedIndex) {
+  if (locked) return;
+  locked = true;
 
-  index++;
+  userAnswers[index] = selectedIndex;
 
-  if (index < quiz.length) {
-    loadQuestion();
-  } else {
-    showResult();
-  }
+  const buttons = document.querySelectorAll(".option");
+
+  buttons.forEach((btn, i) => {
+    if (i === quiz[index].a) btn.classList.add("correct");
+    if (i === selectedIndex && i !== quiz[index].a)
+      btn.classList.add("wrong");
+  });
+
+  if (selectedIndex === quiz[index].a) score += 10;
+
+  setTimeout(() => {
+    index++;
+    index < quiz.length ? loadQuestion() : showResult();
+  }, 1000);
 }
 
 function showResult() {
@@ -59,9 +71,10 @@ function showResult() {
   document.getElementById("resultBox").style.display = "block";
 
   document.getElementById("finalPoints").innerText =
-    `Your Score: ${score} / 200`;
+    `🏆 Your Final Score: ${score} / 200`;
 
   const details = document.getElementById("details");
+  details.innerHTML = "";
 
   quiz.forEach((q, i) => {
     details.innerHTML += `

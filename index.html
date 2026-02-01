@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Base Blockchain Quiz</title>
+
+  <!-- Mobile friendly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- QUIZ BOX -->
+<div class="app" id="quizBox">
+
+  <div class="header">
+    <div class="logo">BASE QUIZ</div>
+    <div id="counter">Question 1/20</div>
+  </div>
+
+  <h2 id="question"></h2>
+
+  <div id="options"></div>
+
+  <button class="next" onclick="nextQuestion()">Next Question</button>
+</div>
+
+<!-- RESULT BOX -->
+<div class="app" id="resultBox" style="display:none;">
+  <h1>🎉 Quiz Finished</h1>
+  <h2 id="finalPoints"></h2>
+  <div id="details"></div>
+</div>
+
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html> 

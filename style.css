@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 15px;
+  background: linear-gradient(180deg, #0b1cff, #050814);
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* App container */
+.app {
+  max-width: 420px;
+  margin: auto;
+  background: #0e1430;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 0 25px rgba(0, 90, 255, 0.4);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #5ea7ff;
+}
+
+#counter {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Question */
+h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border-radius: 12px;
+  border: none;
+  background: #1c3cff;
+  color: white;
+  font-size: 16px;
+}
+
+/* Answer states */
+.correct {
+  color: #00ffb7;
+}
+
+.wrong {
+  color: #ff5252;
+}
+
+hr {
+  border: 1px solid #24307a;
+  margin: 12px 0;
+}

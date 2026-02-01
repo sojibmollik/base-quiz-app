@@ -18,7 +18,7 @@ const quiz = [
  {q:"Base consensus relies on?",o:["PoW","Ethereum PoS","PoA","DPoS"],a:1},
  {q:"Base focuses on?",o:["Developers","Users","Adoption","All"],a:3},
  {q:"Base was launched by?",o:["Google","Binance","Coinbase","Meta"],a:2},
- {q:"You love base?",o:["yes","yes","yes","no"],a:2}
+ {q:"You love base?",o:["no","no","yes","no"],a:2}
 ];
 
 let index = 0;

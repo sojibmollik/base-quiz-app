@@ -1,0 +1,9 @@
+{
+  "name": "Base Blockchain Quiz",
+  "description": "A mobile-friendly quiz to test your Base blockchain knowledge. 20 questions, instant score, and wrong answer review.",
+  "url": "https://base-quiz-app-2xpd.vercel.app/",
+  "icon": "https://base-quiz-app-2xpd.vercel.app/icon.png",
+  "version": "1.0.0",
+  "category": "education",
+  "type": "miniapp"
+}
